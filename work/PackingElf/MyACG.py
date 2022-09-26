@@ -41,14 +41,6 @@ class MYACG:
         self.account = account
         self.password = password
 
-        """#Chrome Crawler Setting
-        options = webdriver.ChromeOptions()
-        options.add_experimental_option('excludeSwitches', ['enable-logging'])
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        options.add_experimental_option('useAutomationExtension', False)
-        options.add_experimental_option("prefs", {"profile.password_manager_enabled": False, "credentials_enable_service": False})
-        options.add_experimental_option("detach", True)"""
-
         #Open Web
         global driver 
         driver = webdriver.Chrome(relative_to_assets('chromedriver.exe'), options=options)
@@ -85,62 +77,6 @@ class MYACG:
 
     def run(self):
         print("done")
-        """while True:
-            if self.command == 'STOP':
-                break
-            
-            if self.order_num == '':
-                time.sleep(0.5)
-            else:
-                #do somthing
-                print(self.order_num)
-
-                Google = GoogleSheets(order_number=self.order_num, status= 'DONE')
-                Google.appendWorksheet()
-                self.order_num = ''
-                pass"""
-
-
-        """time.sleep(1)
-
-        #Search bar
-        search_bar = driver.find_element(By.ID, "gsc-i-id1")
-        search_bar.send_keys("hololive中之人")
-        search_bar.send_keys(Keys.ENTER)
-
-        result = driver.find_element(By.XPATH,'//*[@id="___gcse_3"]/div/div/div/div[5]/div[2]/div[1]/div/div[1]/div[1]/div[1]/div[1]/div/a')
-
-        result.click()
-
-        time.sleep(1)
-
-
-        tab_1 = driver.window_handles[0]
-        tab_2 = driver.window_handles[1]
-
-        driver.switch_to.window(tab_2)
-
-        new_page = driver.find_element(By.CLASS_NAME,"c-post__header__title ")
-        print("1, OK")
-
-        print(new_page.text)
-        driver.close()
-
-        time.sleep(2)
-
-        driver.switch_to.window(tab_1)
-
-
-        driver.quit()"""
-
-        """
-        #Explicit wait
-        element = WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CLASS_NAME, "li"))
-            )
-
-        #titles = driver.find_elements(By.XPATH, '//*[@id="Goods_list_block"]/li[1]/div[2]/a')
-        titles = driver.find_elements(By.NAME, 'name')
-        """
+        
 if __name__ == "__main__":
     pass
