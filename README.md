@@ -1,1 +1,1 @@
-# Make something to make life easier
+# Making something to make life easier
