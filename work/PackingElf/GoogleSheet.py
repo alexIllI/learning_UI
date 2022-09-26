@@ -2,7 +2,7 @@ from Google_Process import GoogleAPIClient
 import pandas as pd
 
 class GoogleSheets(GoogleAPIClient):
-    def __init__(self, status = 'DONE', order_number = '12345') -> None:
+    def __init__(self, status = 'DONE', order_number = '') -> None:
         self.status = status
         self.order_number = order_number
         # 呼叫 GoogleAPIClient.__init__()，並提供 serviceName, version, scope
@@ -20,7 +20,7 @@ class GoogleSheets(GoogleAPIClient):
             '註記': ['-']}
             )
             self.googleAPIService.spreadsheets().values().append(
-                spreadsheetId='1rLRNI3NFeEBVKxP60kbuh6jf3SB-IdqkaYRGxL1VJdk',
+                spreadsheetId='<YOUR KEY>',
                 range='工作表1',
                 valueInputOption='USER_ENTERED',
                 body={
@@ -38,7 +38,7 @@ class GoogleSheets(GoogleAPIClient):
             '註記': ['關轉']}
             )
             self.googleAPIService.spreadsheets().values().append(
-                spreadsheetId='1rLRNI3NFeEBVKxP60kbuh6jf3SB-IdqkaYRGxL1VJdk',
+                spreadsheetId='<YOUR KEY>',
                 range='工作表1',
                 valueInputOption='USER_ENTERED',
                 body={
@@ -56,7 +56,7 @@ class GoogleSheets(GoogleAPIClient):
             '註記': ['-']}
             )
             self.googleAPIService.spreadsheets().values().append(
-                spreadsheetId='1rLRNI3NFeEBVKxP60kbuh6jf3SB-IdqkaYRGxL1VJdk',
+                spreadsheetId='<YOUR KEY>',
                 range='工作表1',
                 valueInputOption='USER_ENTERED',
                 body={
@@ -66,8 +66,4 @@ class GoogleSheets(GoogleAPIClient):
             ).execute()
             return 2
 
-        
-
-"""if __name__ == '__main__':
-    myWorksheet = GoogleSheets()
-    myWorksheet.appendWorksheet()"""
+      
